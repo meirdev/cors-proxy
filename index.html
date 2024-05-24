@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    My App: <span id="status"></span>
+
+    <script>
+        async function load() {
+            const response = await fetch("http://localhost:5050");
+            const data = await response.json();
+
+            document.querySelector("#status").innerHTML = data;
+        }
+
+        load();
+    </script>
+</body>
+
+</html>
